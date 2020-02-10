@@ -3,12 +3,9 @@
     <th>Name</th>
     <th>Food Group</th>
   </tr>
-  <tr>
-    <td>cheese burger</td>
-    <td>meat</td>
-  </tr>
-  <tr>
-    <td>dragon fruit</td>
-    <td>fruit</td>
+  <tr *ngFor="let food of foodList">
+    <td>{{food.name}}</td>
+    <td>{{food.foodGroup}}</td>
   </tr>
 </table>
+<button (click)="addFood()">Add</button>

@@ -7,4 +7,27 @@ import { Component } from '@angular/core';
 })
 export class AppComponent  {
   name = 'Angular';
+
+  foodList = [
+    {
+      name: "cheese burger",
+      foodGroup: "meat"
+    },
+    {
+      name: "dragon fruit",
+      foodGroup: "fruit"
+    },
+    {
+      name: "milk",
+      foodGroup: "dairy"
+    }
+  ];
+
+
+  addFood() {
+    this.foodList.push({
+      name: "spaghetti",
+      foodGroup: "grain"
+    });
+  }
 }
