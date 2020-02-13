@@ -4,14 +4,20 @@ import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { HelloComponent } from './hello.component';
-
-
-// Import of the angular-material angular module
-import { AngularMaterialModule } from './angular-material/angular-material.module';
 import { EditComponent } from './edit/edit.component';
 
+import { CommonModule } from '@angular/common';
+
+// For components using angular-animations
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+// Imports of used components 
+import { 
+  MatDialogModule
+} from '@angular/material';
+
 @NgModule({
-  imports:      [ BrowserModule, FormsModule, AngularMaterialModule ],
+  imports:      [ BrowserModule, FormsModule, MatDialogModule, BrowserAnimationsModule ],
   declarations: [ AppComponent, HelloComponent, EditComponent ],
   bootstrap:    [ AppComponent ]
 })
