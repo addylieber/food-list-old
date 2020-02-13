@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
+import { EditComponent } from './edit/edit.Component';
 
 @Component({
   selector: 'my-app',
@@ -23,11 +25,17 @@ export class AppComponent  {
     }
   ];
 
+  constructor(public dialog: MatDialog) {}
 
   addFood() {
-    this.foodList.push({
-      name: "spaghetti",
-      foodGroup: "grain"
+
+    let dialogRef = this.dialog.open(EditComponent, {
+      height: '400px',
+      width: '600px',
     });
+    // this.foodList.push({
+    //   name: "spaghetti",
+    //   foodGroup: "grain"
+    // });
   }
 }
